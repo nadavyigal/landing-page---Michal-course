@@ -4,7 +4,11 @@
 
 ## תצוגה חיה
 
-ניתן לצפות בדף הנחיתה בכתובת: [קורס תקשורת זוגית](https://couples-communication-course.vercel.app/)
+ניתן לצפות בדף הנחיתה בכתובת: [קורס תקשורת זוגית](https://michal-landing-page.vercel.app/)
+
+## קישורים
+
+- [קוד המקור בגיטהאב](https://github.com/nadavyigal/Michal-landing-page-)
 
 ## תכונות
 
