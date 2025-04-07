@@ -10,6 +10,11 @@
 
 - [קוד המקור בגיטהאב](https://github.com/nadavyigal/Michal-landing-page-)
 - [הוראות פריסה ל-Vercel](./VERCEL_DEPLOYMENT.md)
+- [הוראות פריסה מפורטות](./DEPLOY_NOW.md)
+
+## פריסה מהירה
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fnadavyigal%2FMichal-landing-page-)
 
 ## תכונות
 
