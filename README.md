@@ -9,6 +9,7 @@
 ## קישורים
 
 - [קוד המקור בגיטהאב](https://github.com/nadavyigal/Michal-landing-page-)
+- [הוראות פריסה ל-Vercel](./VERCEL_DEPLOYMENT.md)
 
 ## תכונות
 
@@ -25,6 +26,14 @@
 - React
 - TypeScript
 - Tailwind CSS
+
+## פריסה
+
+הדף נפרס באמצעות [Vercel](https://vercel.com/) שמאפשר:
+- פריסה אוטומטית בעת עדכון הקוד
+- זמן טעינה מהיר
+- אבטחה משופרת
+- ניתוח ביצועים
 
 ## תחזוקה
 
