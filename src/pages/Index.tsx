@@ -2,6 +2,7 @@ import { Heart, Calendar, Clock, MapPin, Video, Gift, MessageCircle, FileText, W
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import ShineLogo from "@/components/ShineLogo";
+import RavMesserForm from "@/components/RavMesserForm";
 
 const Index = () => {
   // Updated dates: 23-26 בנובמבר
@@ -337,25 +338,22 @@ const Index = () => {
       </section>
 
       {/* Final CTA */}
-      <section 
+      <section
         id="register"
-        className="py-20 bg-gradient-to-br from-warm-primary to-warm-secondary text-center"
+        className="py-20 bg-gradient-to-br from-warm-primary to-warm-secondary"
       >
         <div className="container mx-auto px-4">
-          <h2 className="text-5xl font-bold mb-6 text-warm-darker">
-            מוכנים לחזור הביתה?
-          </h2>
-          
-          <p className="text-2xl mb-12 text-warm-dark">
-            הצטרפו עכשיו לאתגר החינמי
-          </p>
-          
-          <Button 
-            size="lg"
-            className="bg-warm-darker hover:bg-warm-darker/90 text-white px-16 py-8 text-2xl rounded-full shadow-[var(--shadow-elevated)] transition-all duration-300 hover:scale-105"
-          >
-            לחצי כאן להרשמה לאתגר
-          </Button>
+          <div className="text-center mb-12">
+            <h2 className="text-5xl font-bold mb-6 text-warm-darker">
+              מוכנים לחזור הביתה?
+            </h2>
+
+            <p className="text-2xl mb-8 text-warm-dark">
+              הצטרפו עכשיו לאתגר החינמי
+            </p>
+          </div>
+
+          <RavMesserForm />
         </div>
       </section>
 
