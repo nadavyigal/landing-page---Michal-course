@@ -1,45 +1,74 @@
-# קורס תקשורת זוגית
+# Welcome to your Lovable project
 
-דף נחיתה לקורס תקשורת זוגית מאת מיכל. אתר מודרני בעברית המציג את תוכן הקורס, מחיר, ויתרונות.
+## Project info
 
-## תצוגה חיה
+**URL**: https://lovable.dev/projects/5fcb23ac-8f31-4f54-b48e-ee575fb258f1
 
-ניתן לצפות בדף הנחיתה בכתובת: [קורס תקשורת זוגית](https://michal-landing-page.vercel.app/)
+## How can I edit this code?
 
-## קישורים
+There are several ways of editing your application.
 
-- [קוד המקור בגיטהאב](https://github.com/nadavyigal/Michal-landing-page-)
-- [הוראות פריסה ל-Vercel](./VERCEL_DEPLOYMENT.md)
-- [הוראות פריסה מפורטות](./DEPLOY_NOW.md)
+**Use Lovable**
 
-## פריסה מהירה
+Simply visit the [Lovable Project](https://lovable.dev/projects/5fcb23ac-8f31-4f54-b48e-ee575fb258f1) and start prompting.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fnadavyigal%2FMichal-landing-page-)
+Changes made via Lovable will be committed automatically to this repo.
 
-## תכונות
+**Use your preferred IDE**
 
-- עיצוב מודרני ומקצועי
-- התאמה למכשירים ניידים (רספונסיבי)
-- תצוגת מחיר ברורה
-- מידע על תוכן הקורס
-- טופס להצטרפות
-- עדויות ממשתתפים
+If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
 
-## טכנולוגיות
+The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
-- Next.js
-- React
+Follow these steps:
+
+```sh
+# Step 1: Clone the repository using the project's Git URL.
+git clone <YOUR_GIT_URL>
+
+# Step 2: Navigate to the project directory.
+cd <YOUR_PROJECT_NAME>
+
+# Step 3: Install the necessary dependencies.
+npm i
+
+# Step 4: Start the development server with auto-reloading and an instant preview.
+npm run dev
+```
+
+**Edit a file directly in GitHub**
+
+- Navigate to the desired file(s).
+- Click the "Edit" button (pencil icon) at the top right of the file view.
+- Make your changes and commit the changes.
+
+**Use GitHub Codespaces**
+
+- Navigate to the main page of your repository.
+- Click on the "Code" button (green button) near the top right.
+- Select the "Codespaces" tab.
+- Click on "New codespace" to launch a new Codespace environment.
+- Edit files directly within the Codespace and commit and push your changes once you're done.
+
+## What technologies are used for this project?
+
+This project is built with:
+
+- Vite
 - TypeScript
+- React
+- shadcn-ui
 - Tailwind CSS
 
-## פריסה
+## How can I deploy this project?
 
-הדף נפרס באמצעות [Vercel](https://vercel.com/) שמאפשר:
-- פריסה אוטומטית בעת עדכון הקוד
-- זמן טעינה מהיר
-- אבטחה משופרת
-- ניתוח ביצועים
+Simply open [Lovable](https://lovable.dev/projects/5fcb23ac-8f31-4f54-b48e-ee575fb258f1) and click on Share -> Publish.
 
-## תחזוקה
+## Can I connect a custom domain to my Lovable project?
 
-פרויקט זה פותח על ידי מיכל ועבר שיפורים עיצוביים לשיפור חווית המשתמש והמראה המקצועי. 
+Yes, you can!
+
+To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+
+Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+
