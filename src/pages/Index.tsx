@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import ShineLogo from "@/components/ShineLogo";
 import RavMesserForm from "@/components/RavMesserForm";
+import heroBackground from "@/assets/hero-couple.jpg";
+import michalPhoto from "@/assets/michal-photo.jpg";
 
 const Index = () => {
   // Updated dates: 23-26 בנובמבר
@@ -17,7 +19,9 @@ const Index = () => {
       <section
         className="relative min-h-screen flex items-center justify-center overflow-hidden"
         style={{
-          background: 'linear-gradient(135deg, rgba(212, 181, 176, 0.9) 0%, rgba(232, 213, 209, 0.9) 50%, rgba(212, 181, 176, 0.9) 100%)',
+          backgroundImage: `linear-gradient(rgba(212, 181, 176, 0.7), rgba(232, 213, 209, 0.8)), url(${heroBackground})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
         }}
       >
         <div className="absolute inset-0 opacity-50">
@@ -49,11 +53,11 @@ const Index = () => {
           <Card className="inline-block bg-white/95 backdrop-blur p-8 rounded-2xl shadow-[var(--shadow-elevated)] mb-8">
             <div className="space-y-3 text-right">
               <p className="flex items-center gap-3 text-xl text-warm-darker">
-                <span><strong>תאריכים:</strong> 23-26 בנובמבר (א׳ ב׳ ד׳ ה׳)</span>
+                <span><strong>תאריכים:</strong> 23-26 בנובמבר (א׳ ב׳ ג׳ ד׳)</span>
                 <Calendar className="text-warm-dark" />
               </p>
               <p className="flex items-center gap-3 text-xl text-warm-darker">
-                <span><strong>שעה:</strong> 20:30 בערב</span>
+                <span><strong>שעה:</strong> 22:30 בערב</span>
                 <Clock className="text-warm-dark" />
               </p>
               <p className="flex items-center gap-3 text-xl text-warm-darker">
@@ -102,11 +106,11 @@ const Index = () => {
               },
               {
                 title: '"הכל עלי"',
-                text: "התחושה שלוקחים אותך כמובן מאליו. שאף אחד לא באמת רואה אותך. שאתה לבד."
+                text: "התחושה שלוקחים אותך כמובן מאליו. שאף אחד לא באמת רואה אותך. תחושת הלבד."
               },
               {
                 title: "עייפות",
-                text: "המקום שאמור לתת לך אנרגיה - מרוקן אותך. חוזרת הביתה ומרגישה יותר עייפה."
+                text: "המקום שאמור לתת לך אנרגיה - מרוקן אותך. הבית כבר לא מקום שמטעין אותך."
               },
               {
                 title: "ניהול, לא חיבור",
@@ -136,7 +140,7 @@ const Index = () => {
             {[
               {
                 day: "יום 1: על מה הריב באמת יושב",
-                date: "יום ראשון, 23 בנובמבר | 20:30",
+                date: "יום ראשון, 23 בנובמבר | 22:30",
                 items: [
                   "למה הריב החוזר לא באמת על מה שאתם חושבים",
                   "מה זה פצעי ילדות ואיך הם משפיעים על הזוגיות שלכם",
@@ -146,7 +150,7 @@ const Index = () => {
               },
               {
                 day: "יום 2: גוף וכעס",
-                date: "יום שני, 24 בנובמבר | 20:30",
+                date: "יום שני, 24 בנובמבר | 22:30",
                 items: [
                   "מה קורה בגוף שלכם כשאתם כועסים (וזה לא מה שאתם חושבים)",
                   "הקשר בין תחושות גוף לפצעי ילדות",
@@ -157,7 +161,7 @@ const Index = () => {
               },
               {
                 day: "יום 3: תקשורת מחברת",
-                date: "יום רביעי, 25 בנובמבר | 20:30",
+                date: "יום שלישי, 25 בנובמבר | 22:30",
                 items: [
                   "5 כללי הזהב לתקשורת שמחברת (גם כשקשה)",
                   "איך להגיד הכל ולהישאר קרובים",
@@ -168,7 +172,7 @@ const Index = () => {
               },
               {
                 day: "יום 4: הוויות והצעד הבא",
-                date: "יום חמישי, 26 בנובמבר | 20:30",
+                date: "יום רביעי, 26 בנובמבר | 22:30",
                 items: [
                   "מה זה הוויות ואיך הן מנהלות אותנו",
                   "איך לעבוד עם הוויות בצורה שתשרת אתכם",
@@ -208,7 +212,7 @@ const Index = () => {
               { icon: <MessageCircle className="w-12 h-12" />, title: "קבוצת ווטסאפ", text: "לתמיכה, שאלות ושיתוף" },
               { icon: <FileText className="w-12 h-12" />, title: "תרגילים", text: "מעשיים לעבודה אישית" },
               { icon: <Wrench className="w-12 h-12" />, title: "כלים מעשיים", text: "שאפשר ליישם מיד" },
-              { icon: <Heart className="w-12 h-12" />, title: "והכי חשוב", text: "תחזרו לזוגיות שבחרתם" }
+              { icon: <Heart className="w-12 h-12" />, title: "והכי חשוב", text: "תלמדו איך לעצור את הריב שחוזר על עצמו" }
             ].map((benefit, index) => (
               <Card key={index} className="p-8 text-center bg-muted rounded-2xl">
                 <div className="text-warm-dark mb-4 flex justify-center">
@@ -271,8 +275,12 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto grid md:grid-cols-5 gap-12 items-center">
             <div className="md:col-span-2">
-              <div className="aspect-square rounded-3xl overflow-hidden shadow-[var(--shadow-elevated)] bg-gradient-to-br from-warm-primary to-warm-secondary flex items-center justify-center">
-                <div className="text-8xl text-white">💛</div>
+              <div className="aspect-square rounded-3xl overflow-hidden shadow-[var(--shadow-elevated)]">
+                <img
+                  src={michalPhoto}
+                  alt="מיכל סלונים"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
             
