@@ -11,7 +11,7 @@ const RavMesserForm = () => {
     // Create script element
     const script = document.createElement('script');
     script.type = 'text/javascript';
-    script.src = '//form.ravpage.co.il/6f1e8f6eab96d5f5bb85f4653ebfb4566910A42A';
+    script.src = 'https://form.ravpage.co.il/6f1e8f6eab96d5f5bb85f4653ebfb4566910A42A';
     script.charset = 'UTF-8';
     script.async = true;
 
