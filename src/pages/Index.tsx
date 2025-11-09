@@ -2,8 +2,6 @@ import { Heart, Calendar, Clock, MapPin, Video, Gift, MessageCircle, FileText, W
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import ShineLogo from "@/components/ShineLogo";
-import heroBackground from "@/assets/hero-couple.jpg";
-import michalPhoto from "@/assets/michal-photo.jpg";
 
 const Index = () => {
   // Updated dates: 23-26 בנובמבר
@@ -15,12 +13,10 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background" dir="rtl">
       {/* Hero Section */}
-      <section 
+      <section
         className="relative min-h-screen flex items-center justify-center overflow-hidden"
         style={{
-          backgroundImage: `linear-gradient(rgba(212, 181, 176, 0.7), rgba(232, 213, 209, 0.8)), url(${heroBackground})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          background: 'linear-gradient(135deg, rgba(212, 181, 176, 0.9) 0%, rgba(232, 213, 209, 0.9) 50%, rgba(212, 181, 176, 0.9) 100%)',
         }}
       >
         <div className="absolute inset-0 opacity-50">
@@ -274,12 +270,8 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto grid md:grid-cols-5 gap-12 items-center">
             <div className="md:col-span-2">
-              <div className="aspect-square rounded-3xl overflow-hidden shadow-[var(--shadow-elevated)]">
-                <img 
-                  src={michalPhoto} 
-                  alt="מיכל סלונים"
-                  className="w-full h-full object-cover"
-                />
+              <div className="aspect-square rounded-3xl overflow-hidden shadow-[var(--shadow-elevated)] bg-gradient-to-br from-warm-primary to-warm-secondary flex items-center justify-center">
+                <div className="text-8xl text-white">💛</div>
               </div>
             </div>
             
