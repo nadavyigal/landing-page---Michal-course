@@ -46,8 +46,8 @@ const Index = () => {
           </h1>
           
           <p className="text-2xl md:text-3xl mb-12 text-warm-dark font-light">
-            אתגר 4 ימים לעצור את הריב החוזר<br />
-            ולחזור לזוגיות שבחרתם
+            <strong>אתגר 4 ימים לעצור את הריב החוזר<br />
+            ולחזור לזוגיות שבחרתם</strong>
           </p>
           
           <Card className="inline-block bg-white/95 backdrop-blur p-8 rounded-2xl shadow-[var(--shadow-elevated)] mb-8">
@@ -57,7 +57,7 @@ const Index = () => {
                 <Calendar className="text-warm-dark" />
               </p>
               <p className="flex items-center gap-3 text-xl text-warm-darker">
-                <span><strong>שעה:</strong> 22:30 בערב</span>
+                <span><strong>שעה:</strong> 10:30</span>
                 <Clock className="text-warm-dark" />
               </p>
               <p className="flex items-center gap-3 text-xl text-warm-darker">
@@ -73,13 +73,17 @@ const Index = () => {
             </span>
           </div>
           
-          <Button 
-            size="lg" 
-            onClick={scrollToRegister}
-            className="bg-warm-dark hover:bg-warm-darker text-white px-12 py-8 text-2xl rounded-full shadow-[var(--shadow-elevated)] transition-all duration-300 hover:scale-105 hover:shadow-xl"
-          >
-            רוצה להצטרף? לחצי כאן להרשמה
-          </Button>
+          <div className="flex justify-center">
+            <Button
+              size="lg"
+              onClick={scrollToRegister}
+              className="bg-[#8B7355] hover:bg-[#6B5545] text-white px-16 py-8 text-xl rounded-full shadow-[var(--shadow-elevated)] transition-all duration-300 hover:scale-105 hover:shadow-xl leading-relaxed"
+              style={{ lineHeight: '2' }}
+            >
+              כן אני רוצה להצטרף לאתגר<br />
+              ולהפסיק את הריב החוזר
+            </Button>
+          </div>
         </div>
       </section>
 
@@ -140,7 +144,7 @@ const Index = () => {
             {[
               {
                 day: "יום 1: על מה הריב באמת יושב",
-                date: "יום ראשון, 23 בנובמבר | 22:30",
+                date: "יום ראשון, 23 בנובמבר | 10:30",
                 items: [
                   "למה הריב החוזר לא באמת על מה שאתם חושבים",
                   "מה זה פצעי ילדות ואיך הם משפיעים על הזוגיות שלכם",
@@ -150,7 +154,7 @@ const Index = () => {
               },
               {
                 day: "יום 2: גוף וכעס",
-                date: "יום שני, 24 בנובמבר | 22:30",
+                date: "יום שני, 24 בנובמבר | 10:30",
                 items: [
                   "מה קורה בגוף שלכם כשאתם כועסים (וזה לא מה שאתם חושבים)",
                   "הקשר בין תחושות גוף לפצעי ילדות",
@@ -161,9 +165,9 @@ const Index = () => {
               },
               {
                 day: "יום 3: תקשורת מחברת",
-                date: "יום שלישי, 25 בנובמבר | 22:30",
+                date: "יום שלישי, 25 בנובמבר | 10:30",
                 items: [
-                  "5 כללי הזהב לתקשורת שמחברת (גם כשקשה)",
+                  "5 כללי הזהב לתקשורת שמחברת (איך להגיד גם כשקשה)",
                   "איך להגיד הכל ולהישאר קרובים",
                   "תרגול מעשי: איך להגיד את הקשה",
                   "הטעויות הנפוצות ביותר בתקשורת זוגית",
@@ -172,7 +176,7 @@ const Index = () => {
               },
               {
                 day: "יום 4: הוויות והצעד הבא",
-                date: "יום רביעי, 26 בנובמבר | 22:30",
+                date: "יום רביעי, 26 בנובמבר | 10:30",
                 items: [
                   "מה זה הוויות ואיך הן מנהלות אותנו",
                   "איך לעבוד עם הוויות בצורה שתשרת אתכם",
@@ -195,6 +199,18 @@ const Index = () => {
               </Card>
             ))}
           </div>
+          
+          <div className="mt-12 flex justify-center">
+            <Button
+              size="lg"
+              onClick={scrollToRegister}
+              className="bg-[#8B7355] hover:bg-[#6B5545] text-white px-16 py-8 text-xl rounded-full shadow-[var(--shadow-elevated)] transition-all duration-300 hover:scale-105 hover:shadow-xl leading-relaxed"
+              style={{ lineHeight: '2' }}
+            >
+              כן אני רוצה להצטרף לאתגר<br />
+              ולהפסיק את הריב החוזר
+            </Button>
+          </div>
         </div>
       </section>
 
@@ -207,8 +223,8 @@ const Index = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
-              { icon: <Video className="w-12 h-12" />, title: "4 מפגשים חיים", text: "בזום, כל ערב 30-40 דקות" },
-              { icon: <Gift className="w-12 h-12" />, title: "הקלטות", text: "של כל המפגשים למי שלא יכול להגיע חי" },
+              { icon: <Video className="w-12 h-12" />, title: "4 מפגשים חיים", text: "בזום, כל יום 30-40 דקות" },
+              { icon: <Gift className="w-12 h-12" />, title: "הקלטות", text: "של כל המפגשים למי שלא יכול להגיע" },
               { icon: <MessageCircle className="w-12 h-12" />, title: "קבוצת ווטסאפ", text: "לתמיכה, שאלות ושיתוף" },
               { icon: <FileText className="w-12 h-12" />, title: "תרגילים", text: "מעשיים לעבודה אישית" },
               { icon: <Wrench className="w-12 h-12" />, title: "כלים מעשיים", text: "שאפשר ליישם מיד" },
@@ -242,7 +258,7 @@ const Index = () => {
                 "התחושה שלוקחים אתכם כמובן מאליו",
                 "רוצים לחזור לקרבה, לחיבור, לאהבה",
                 "מוכנים להסתכל פנימה ולעשות עבודה אמיתית",
-                "עשיתם כבר התפתחות אישית ומבינים את השפה",
+                "רוצים לשפר את הזוגיות שלכם",
                 "מוכנים להשקיע בעצמכם ובזוגיות שלכם"
               ].map((item, index) => (
                 <li 
@@ -299,7 +315,7 @@ const Index = () => {
                 <p>איך כשמבינים מה באמת קורה מתחת לפני השטח, איך כשעובדים על עצמנו ולא רק על הזוג - הכל משתנה. הקרבה חוזרת, החיבור מתחדש, והזוגיות הופכת שוב למקום בטוח, חם ומלא אהבה.</p>
                 
                 <p className="text-xl">
-                  <strong className="text-warm-darker">אחרי שליוויתי זוגות רבים בקליניקה ובקורס הדיגיטלי "מחוברים מחדש"</strong> - אני רוצה להרחיב את מעגל ההשפעה ולהביא את הידע הזה לעוד זוגות.
+                  <strong className="text-warm-darker">אחרי שליוויתי זוגות ויחידים רבים בקליניקה ובקורס הדיגיטלי "מחוברים מחדש"</strong> - אני רוצה להרחיב את מעגל ההשפעה ולהביא את הידע הזה לעוד זוגות.
                 </p>
                 
                 <p>באתגר הזה, אני אראה לכם בדיוק איך לעשות את השינוי הזה - צעד אחר צעד.</p>
