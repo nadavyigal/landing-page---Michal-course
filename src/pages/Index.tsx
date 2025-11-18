@@ -46,8 +46,8 @@ const Index = () => {
           </h1>
           
           <p className="text-2xl md:text-3xl mb-12 text-warm-dark font-light">
-            אתגר 4 ימים לעצור את הריב החוזר<br />
-            ולחזור לזוגיות שבחרתם
+            <strong>אתגר 4 ימים לעצור את הריב החוזר<br />
+            ולחזור לזוגיות שבחרתם</strong>
           </p>
           
           <Card className="inline-block bg-white/95 backdrop-blur p-8 rounded-2xl shadow-[var(--shadow-elevated)] mb-8">
@@ -57,7 +57,7 @@ const Index = () => {
                 <Calendar className="text-warm-dark" />
               </p>
               <p className="flex items-center gap-3 text-xl text-warm-darker">
-                <span><strong>שעה:</strong> 10:30 בערב</span>
+                <span><strong>שעה:</strong> 10:30</span>
                 <Clock className="text-warm-dark" />
               </p>
               <p className="flex items-center gap-3 text-xl text-warm-darker">
@@ -74,12 +74,14 @@ const Index = () => {
           </div>
           
           <div className="flex justify-center">
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               onClick={scrollToRegister}
-              className="bg-warm-dark hover:bg-warm-darker text-white px-12 py-8 text-2xl rounded-full shadow-[var(--shadow-elevated)] transition-all duration-300 hover:scale-105 hover:shadow-xl"
+              className="bg-[#8B7355] hover:bg-[#6B5545] text-white px-16 py-8 text-xl rounded-full shadow-[var(--shadow-elevated)] transition-all duration-300 hover:scale-105 hover:shadow-xl leading-relaxed"
+              style={{ lineHeight: '2' }}
             >
-              כן, אני רוצה להצטרף לאתגר ולהפסיק את הריב החוזר
+              כן אני רוצה להצטרף לאתגר<br />
+              ולהפסיק את הריב החוזר
             </Button>
           </div>
         </div>
@@ -165,7 +167,7 @@ const Index = () => {
                 day: "יום 3: תקשורת מחברת",
                 date: "יום שלישי, 25 בנובמבר | 10:30",
                 items: [
-                  "5 כללי הזהב לתקשורת שמחברת (גם כשקשה)",
+                  "5 כללי הזהב לתקשורת שמחברת (איך להגיד גם כשקשה)",
                   "איך להגיד הכל ולהישאר קרובים",
                   "תרגול מעשי: איך להגיד את הקשה",
                   "הטעויות הנפוצות ביותר בתקשורת זוגית",
@@ -199,12 +201,14 @@ const Index = () => {
           </div>
           
           <div className="mt-12 flex justify-center">
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               onClick={scrollToRegister}
-              className="bg-warm-dark hover:bg-warm-darker text-white px-12 py-8 text-2xl rounded-full shadow-[var(--shadow-elevated)] transition-all duration-300 hover:scale-105 hover:shadow-xl"
+              className="bg-[#8B7355] hover:bg-[#6B5545] text-white px-16 py-8 text-xl rounded-full shadow-[var(--shadow-elevated)] transition-all duration-300 hover:scale-105 hover:shadow-xl leading-relaxed"
+              style={{ lineHeight: '2' }}
             >
-              כן, אני רוצה להצטרף לאתגר ולהפסיק את הריב החוזר
+              כן אני רוצה להצטרף לאתגר<br />
+              ולהפסיק את הריב החוזר
             </Button>
           </div>
         </div>
