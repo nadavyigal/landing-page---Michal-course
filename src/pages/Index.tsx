@@ -7,7 +7,7 @@ import heroBackground from "@/assets/hero-couple.jpg";
 import michalPhoto from "@/assets/michal-photo.jpg";
 
 const Index = () => {
-  // Updated dates: 23-26 בנובמבר
+  // Updated dates: 14-17 בדצמבר
   const scrollToRegister = () => {
     const element = document.getElementById('register');
     element?.scrollIntoView({ behavior: 'smooth' });
@@ -53,11 +53,11 @@ const Index = () => {
           <Card className="inline-block bg-white/95 backdrop-blur p-8 rounded-2xl shadow-[var(--shadow-elevated)] mb-8">
             <div className="space-y-3 text-right">
               <p className="flex items-center gap-3 text-xl text-warm-darker">
-                <span><strong>תאריכים:</strong> 23-26 בנובמבר (א׳ ב׳ ג׳ ד׳)</span>
+                <span><strong>תאריכים:</strong> 14-17 בדצמבר (א׳ ב׳ ג׳ ד׳)</span>
                 <Calendar className="text-warm-dark" />
               </p>
               <p className="flex items-center gap-3 text-xl text-warm-darker">
-                <span><strong>שעה:</strong> 10:30</span>
+                <span><strong>שעה:</strong> 20:00 בערב</span>
                 <Clock className="text-warm-dark" />
               </p>
               <p className="flex items-center gap-3 text-xl text-warm-darker">
@@ -144,7 +144,7 @@ const Index = () => {
             {[
               {
                 day: "יום 1: על מה הריב באמת יושב",
-                date: "יום ראשון, 23 בנובמבר | 10:30",
+                date: "יום ראשון, 14 בדצמבר | 20:00 בערב",
                 items: [
                   "למה הריב החוזר לא באמת על מה שאתם חושבים",
                   "מה זה פצעי ילדות ואיך הם משפיעים על הזוגיות שלכם",
@@ -154,7 +154,7 @@ const Index = () => {
               },
               {
                 day: "יום 2: גוף וכעס",
-                date: "יום שני, 24 בנובמבר | 10:30",
+                date: "יום שני, 15 בדצמבר | 20:00 בערב",
                 items: [
                   "מה קורה בגוף שלכם כשאתם כועסים (וזה לא מה שאתם חושבים)",
                   "הקשר בין תחושות גוף לפצעי ילדות",
@@ -165,7 +165,7 @@ const Index = () => {
               },
               {
                 day: "יום 3: תקשורת מחברת",
-                date: "יום שלישי, 25 בנובמבר | 10:30",
+                date: "יום שלישי, 16 בדצמבר | 20:00 בערב",
                 items: [
                   "5 כללי הזהב לתקשורת שמחברת (איך להגיד גם כשקשה)",
                   "איך להגיד הכל ולהישאר קרובים",
@@ -176,7 +176,7 @@ const Index = () => {
               },
               {
                 day: "יום 4: הוויות והצעד הבא",
-                date: "יום רביעי, 26 בנובמבר | 10:30",
+                date: "יום רביעי, 17 בדצמבר | 20:00 בערב",
                 items: [
                   "מה זה הוויות ואיך הן מנהלות אותנו",
                   "איך לעבוד עם הוויות בצורה שתשרת אתכם",
