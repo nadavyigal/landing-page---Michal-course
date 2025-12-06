@@ -233,7 +233,7 @@ const Index = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
               { icon: <Video className="w-12 h-12" />, title: "4 מפגשים מוקלטים", text: "כל יום 30-40 דקות" },
-              { icon: <Gift className="w-12 h-12" />, title: "הקלטות", text: "מצגות מההדרכה עם נקודות המפתח וראשי פרקים לתזכורת." },
+              { icon: <Gift className="w-12 h-12" />, title: "מצגות מההדרכה", text: "הכוללות נקודות מפתח וראשי פרקים לתזכורת." },
               { icon: <MessageCircle className="w-12 h-12" />, title: "קבוצת ווטסאפ", text: "לתמיכה, שאלות ושיתוף" },
               { icon: <FileText className="w-12 h-12" />, title: "תרגילים", text: "מעשיים לעבודה אישית" },
               { icon: <Wrench className="w-12 h-12" />, title: "כלים מעשיים", text: "שאפשר ליישם מיד" },
