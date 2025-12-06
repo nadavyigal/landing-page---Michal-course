@@ -57,7 +57,7 @@ const Index = () => {
                 <Calendar className="text-warm-dark" />
               </p>
               <p className="flex items-center gap-3 text-xl text-warm-darker">
-                <span><strong>שעה:</strong> 20:00 בערב</span>
+                <span><strong>שעה:</strong> 20:30 בערב</span>
                 <Clock className="text-warm-dark" />
               </p>
               <p className="flex items-center gap-3 text-xl text-warm-darker">
@@ -77,8 +77,7 @@ const Index = () => {
             <Button
               size="lg"
               onClick={scrollToRegister}
-              className="bg-[#8B7355] hover:bg-[#6B5545] text-white px-16 py-8 text-xl rounded-full shadow-[var(--shadow-elevated)] transition-all duration-300 hover:scale-105 hover:shadow-xl leading-relaxed"
-              style={{ lineHeight: '2' }}
+              className="bg-[#8B7355] hover:bg-[#6B5545] text-white px-16 py-6 text-xl rounded-full shadow-[var(--shadow-elevated)] transition-all duration-300 hover:scale-105 hover:shadow-xl leading-snug"
             >
               כן אני רוצה להצטרף לאתגר<br />
               ולהפסיק את הריב החוזר
@@ -98,33 +97,44 @@ const Index = () => {
             {[
               {
                 title: "הריב החוזר",
-                text: "לא משנה כמה פעמים תדברו על זה, הוא פשוט חוזר שוב ושוב. על הכלים, על הילדים, על הזמן, על הכסף."
+                text: "לא משנה כמה פעמים תדברו על זה, הוא פשוט חוזר שוב ושוב. על הכלים, על הילדים, על הזמן, על הכסף.",
+                icon: <MessageCircle className="w-8 h-8 text-warm-dark" />
               },
               {
                 title: "תחושת בדידות",
-                text: "אתם ביחד, אבל זה מרגיש כל כך רחוק. כאילו יש קיר ביניכם שלא יודעים איך לפרוץ."
+                text: "אתם ביחד, אבל זה מרגיש כל כך רחוק. כאילו יש קיר ביניכם שלא יודעים איך לפרוץ.",
+                icon: <Heart className="w-8 h-8 text-warm-dark" />
               },
               {
                 title: "שתיקה או צעקות",
-                text: "או שיש שתיקה כבדה, או שכל שיחה הופכת לריב. כבר לא יודעים איך לדבר בלי להיפגע."
+                text: "או שיש שתיקה כבדה, או שכל שיחה הופכת לריב. כבר לא יודעים איך לדבר בלי להיפגע.",
+                icon: <MessageCircle className="w-8 h-8 text-warm-dark" />
               },
               {
                 title: '"הכל עלי"',
-                text: "התחושה שלוקחים אותך כמובן מאליו. שאף אחד לא באמת רואה אותך. תחושת הלבד."
+                text: "התחושה שלוקחים אותך כמובן מאליו. שאף אחד לא באמת רואה אותך. תחושת הלבד.",
+                icon: <Gift className="w-8 h-8 text-warm-dark" />
               },
               {
                 title: "עייפות",
-                text: "המקום שאמור לתת לך אנרגיה - מרוקן אותך. הבית כבר לא מקום שמטעין אותך."
+                text: "המקום שאמור לתת לך אנרגיה - מרוקן אותך. הבית כבר לא מקום שמטעין אותך.",
+                icon: <Clock className="w-8 h-8 text-warm-dark" />
               },
               {
                 title: "ניהול, לא חיבור",
-                text: "אתם מנהלים בית וילדים ביחד, אבל הקרבה, האהבה, הניצוץ - נעלמו."
+                text: "אתם מנהלים בית וילדים ביחד, אבל הקרבה, האהבה, הניצוץ - נעלמו.",
+                icon: <Heart className="w-8 h-8 text-warm-dark" />
               }
             ].map((pain, index) => (
               <Card 
                 key={index}
                 className="p-8 text-center bg-muted border-2 border-transparent hover:border-warm-primary transition-all duration-300 hover:-translate-y-2 rounded-2xl"
               >
+                {pain.icon && (
+                  <div className="mb-4 flex justify-center">
+                    {pain.icon}
+                  </div>
+                )}
                 <h3 className="text-2xl font-semibold mb-4 text-warm-dark">{pain.title}</h3>
                 <p className="text-foreground/80 leading-relaxed">{pain.text}</p>
               </Card>
@@ -144,7 +154,7 @@ const Index = () => {
             {[
               {
                 day: "יום 1: על מה הריב באמת יושב",
-                date: "יום ראשון, 14 בדצמבר | 20:00 בערב",
+                date: "יום ראשון, 14 בדצמבר | 20:30 בערב",
                 items: [
                   "למה הריב החוזר לא באמת על מה שאתם חושבים",
                   "מה זה פצעי ילדות ואיך הם משפיעים על הזוגיות שלכם",
@@ -154,7 +164,7 @@ const Index = () => {
               },
               {
                 day: "יום 2: גוף וכעס",
-                date: "יום שני, 15 בדצמבר | 20:00 בערב",
+                date: "יום שני, 15 בדצמבר | 20:30 בערב",
                 items: [
                   "מה קורה בגוף שלכם כשאתם כועסים (וזה לא מה שאתם חושבים)",
                   "הקשר בין תחושות גוף לפצעי ילדות",
@@ -165,7 +175,7 @@ const Index = () => {
               },
               {
                 day: "יום 3: תקשורת מחברת",
-                date: "יום שלישי, 16 בדצמבר | 20:00 בערב",
+                date: "יום שלישי, 16 בדצמבר | 20:30 בערב",
                 items: [
                   "5 כללי הזהב לתקשורת שמחברת (איך להגיד גם כשקשה)",
                   "איך להגיד הכל ולהישאר קרובים",
@@ -176,7 +186,7 @@ const Index = () => {
               },
               {
                 day: "יום 4: הוויות והצעד הבא",
-                date: "יום רביעי, 17 בדצמבר | 20:00 בערב",
+                date: "יום רביעי, 17 בדצמבר | 20:30 בערב",
                 items: [
                   "מה זה הוויות ואיך הן מנהלות אותנו",
                   "איך לעבוד עם הוויות בצורה שתשרת אתכם",
@@ -204,8 +214,7 @@ const Index = () => {
             <Button
               size="lg"
               onClick={scrollToRegister}
-              className="bg-[#8B7355] hover:bg-[#6B5545] text-white px-16 py-8 text-xl rounded-full shadow-[var(--shadow-elevated)] transition-all duration-300 hover:scale-105 hover:shadow-xl leading-relaxed"
-              style={{ lineHeight: '2' }}
+              className="bg-[#8B7355] hover:bg-[#6B5545] text-white px-16 py-6 text-xl rounded-full shadow-[var(--shadow-elevated)] transition-all duration-300 hover:scale-105 hover:shadow-xl leading-snug"
             >
               כן אני רוצה להצטרף לאתגר<br />
               ולהפסיק את הריב החוזר
@@ -343,8 +352,12 @@ const Index = () => {
                 a: "<strong>כן!</strong> אין תשלום, אין מחויבות, אין מלכודת. זו מתנה שלי לכם. (אם תרצו להמשיך איתי אחרי האתגר בקורס המלא - נדבר על זה)"
               },
               {
-                q: "מה אם אני לא יכול/ה בכל המפגשים?",
-                a: "<strong>זה בסדר!</strong> כל מפגש יוקלט ותקבלו לינק להקלטה. אבל מומלץ מאוד להגיע חי - זה הרבה יותר חזק ומשפיע."
+                q: "אנחנו זוג בתחילת הדרך האם זה מתאים לנו?",
+                a: "כן! התוכן של האתגר מתאים בכל שלבי הזוגיות כי לכולנו יש ריב חוזר ולא משנה באיזה שלב נמצאים."
+              },
+              {
+                q: "אנחנו זוג שכבר 30 שנה ביחד, האם האתגר רלוונטי עבורנו?",
+                a: "בהחלט! האתגר רלוונטי לכל שלב בזוגיות. הכלים והתפיסות שתקבלו באתגר מותאמים לכל שלב בזוגיות, בין אם אתם בתחילת הדרך, אחרי כמה שנים או זוג וותיק."
               }
             ].map((faq, index) => (
               <Card key={index} className="bg-white p-8 rounded-2xl shadow-[var(--shadow-soft)]">
