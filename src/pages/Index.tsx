@@ -1,4 +1,4 @@
-import { Heart, Calendar, Clock, MapPin, Video, Gift, MessageCircle, FileText, Wrench } from "lucide-react";
+import { Heart, Calendar, Clock, MapPin, Video, Gift, MessageCircle, FileText, Wrench, Repeat, UserX, Volume2, AlertTriangle, BatteryLow, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import ShineLogo from "@/components/ShineLogo";
@@ -98,32 +98,32 @@ const Index = () => {
               {
                 title: "הריב החוזר",
                 text: "לא משנה כמה פעמים תדברו על זה, הוא פשוט חוזר שוב ושוב. על הכלים, על הילדים, על הזמן, על הכסף.",
-                icon: <MessageCircle className="w-8 h-8 text-warm-dark" />
+                icon: <Repeat className="w-8 h-8 text-warm-dark" />
               },
               {
                 title: "תחושת בדידות",
                 text: "אתם ביחד, אבל זה מרגיש כל כך רחוק. כאילו יש קיר ביניכם שלא יודעים איך לפרוץ.",
-                icon: <Heart className="w-8 h-8 text-warm-dark" />
+                icon: <UserX className="w-8 h-8 text-warm-dark" />
               },
               {
                 title: "שתיקה או צעקות",
                 text: "או שיש שתיקה כבדה, או שכל שיחה הופכת לריב. כבר לא יודעים איך לדבר בלי להיפגע.",
-                icon: <MessageCircle className="w-8 h-8 text-warm-dark" />
+                icon: <Volume2 className="w-8 h-8 text-warm-dark" />
               },
               {
                 title: '"הכל עלי"',
                 text: "התחושה שלוקחים אותך כמובן מאליו. שאף אחד לא באמת רואה אותך. תחושת הלבד.",
-                icon: <Gift className="w-8 h-8 text-warm-dark" />
+                icon: <AlertTriangle className="w-8 h-8 text-warm-dark" />
               },
               {
                 title: "עייפות",
                 text: "המקום שאמור לתת לך אנרגיה - מרוקן אותך. הבית כבר לא מקום שמטעין אותך.",
-                icon: <Clock className="w-8 h-8 text-warm-dark" />
+                icon: <BatteryLow className="w-8 h-8 text-warm-dark" />
               },
               {
                 title: "ניהול, לא חיבור",
                 text: "אתם מנהלים בית וילדים ביחד, אבל הקרבה, האהבה, הניצוץ - נעלמו.",
-                icon: <Heart className="w-8 h-8 text-warm-dark" />
+                icon: <Users className="w-8 h-8 text-warm-dark" />
               }
             ].map((pain, index) => (
               <Card 
@@ -281,15 +281,17 @@ const Index = () => {
             </ul>
             
             <div className="mt-12 text-center">
-              <p className="text-2xl text-warm-dark mb-2">
-                <strong>והחלק הכי טוב?</strong>
-              </p>
-              <p className="text-xl text-foreground/80 leading-relaxed">
-                לא צריך את שני בני הזוג!<br />
-                מספיק שאחד/ת מכם יגיע.<br />
-                <br />
-                כי כשאחד משתנה - השני משתנה בעקבותיו. 💛
-              </p>
+              <div className="inline-block bg-warm-secondary/20 border border-warm-dark/20 rounded-3xl px-8 py-6 shadow-[var(--shadow-soft)] max-w-xl mx-auto">
+                <p className="text-2xl text-warm-darker mb-3">
+                  <strong>והחלק הכי טוב?</strong>
+                </p>
+                <p className="text-xl text-foreground/90 leading-relaxed">
+                  לא צריך את שני בני הזוג!<br />
+                  מספיק שאחד/ת מכם יגיע.<br />
+                  <br />
+                  כי כשאחד משתנה - השני משתנה בעקבותיו. 💛
+                </p>
+              </div>
             </div>
           </Card>
         </div>
