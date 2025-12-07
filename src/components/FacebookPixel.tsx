@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 
 declare global {
@@ -9,11 +9,18 @@ declare global {
 
 const FacebookPixel = () => {
   const location = useLocation();
+  const isInitialMount = useRef(true);
 
   useEffect(() => {
-    // Track PageView after React mounts and on route changes
+    // Skip initial mount since HTML script already tracks it
+    // Only track on route changes (SPA navigation)
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+      return;
+    }
+
+    // Track PageView on route changes
     if (typeof window !== 'undefined' && window.fbq) {
-      // Wait for pixel to be fully loaded before tracking
       const trackPageView = () => {
         try {
           window.fbq('track', 'PageView');
@@ -22,11 +29,10 @@ const FacebookPixel = () => {
         }
       };
 
-      // Small delay to ensure pixel script is fully initialized
-      // This is important for SPAs where React loads after the initial HTML
+      // Small delay to ensure smooth tracking
       const timer = setTimeout(() => {
         trackPageView();
-      }, 300);
+      }, 100);
 
       return () => clearTimeout(timer);
     }

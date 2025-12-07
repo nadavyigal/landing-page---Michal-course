@@ -27,6 +27,16 @@
       s.parentNode.insertBefore(t,s)}(window, document,'script',
       'https://connect.facebook.net/en_US/fbevents.js');
       fbq('init', '872864037421681');
+      
+      // Track PageView after page is fully loaded
+      // This ensures the pixel fires even before React loads (for Meta Pixel Helper)
+      if (document.readyState === 'complete') {
+        fbq('track', 'PageView');
+      } else {
+        window.addEventListener('load', function() {
+          fbq('track', 'PageView');
+        }, { once: true });
+      }
     </script>
     <!-- End Facebook Pixel Code -->
   </head>
