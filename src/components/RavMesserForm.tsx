@@ -45,15 +45,27 @@ const RavMesserForm = () => {
         <!-- 1) Read ?ref=... from the parent page URL (landing page) -->
         <script>
           (function() {
+            // Check if debug mode is enabled via ?debug=true
+            var debugEnabled = false;
+            try {
+              if (window.parent && window.parent.location && window.parent.location.search) {
+                debugEnabled = window.parent.location.search.includes('debug=true');
+              }
+            } catch (e) {
+              // Can't access parent, no debug mode
+            }
+
             var debugLog = [];
             var debugDiv = document.getElementById('debug-info');
 
             function log(msg) {
-              debugLog.push(msg);
               console.log('[RavMesser Debug]', msg);
-              if (debugDiv) {
-                debugDiv.innerHTML = debugLog.join('<br>');
-                debugDiv.classList.add('show');
+              if (debugEnabled) {
+                debugLog.push(msg);
+                if (debugDiv) {
+                  debugDiv.innerHTML = debugLog.join('<br>');
+                  debugDiv.classList.add('show');
+                }
               }
             }
 
@@ -80,6 +92,7 @@ const RavMesserForm = () => {
               // Store in multiple places
               window.__landingRef = ref;
               window.CAPTURED_REF = ref;
+              window.DEBUG_ENABLED = debugEnabled;
 
               if (ref) {
                 log('✓ Successfully captured ref: ' + ref);
@@ -100,11 +113,12 @@ const RavMesserForm = () => {
         <script>
           (function() {
             var ref = window.__landingRef || window.CAPTURED_REF;
+            var debugEnabled = window.DEBUG_ENABLED || false;
 
             var debugDiv = document.getElementById('debug-info');
             function log(msg) {
               console.log('[RavMesser Field]', msg);
-              if (debugDiv) {
+              if (debugEnabled && debugDiv) {
                 debugDiv.innerHTML += '<br>' + msg;
               }
             }
@@ -124,7 +138,10 @@ const RavMesserForm = () => {
               attempts++;
 
               // Try multiple selectors to find the ref field
+              // RavMesser uses fields[ref] format, so check that first!
               var selectors = [
+                "input[name='fields[ref]']",  // RavMesser format - HIGHEST PRIORITY
+                "input[name*='[ref]']",       // Broader match for field[ref] pattern
                 "input[name='ref']",
                 "input[name='Ref']",
                 "input[name='REF']",
@@ -147,15 +164,17 @@ const RavMesserForm = () => {
                   clearInterval(timer);
 
                   // Hide debug after 5 seconds of success
-                  setTimeout(function() {
-                    if (debugDiv) debugDiv.style.display = 'none';
-                  }, 5000);
+                  if (debugEnabled) {
+                    setTimeout(function() {
+                      if (debugDiv) debugDiv.style.display = 'none';
+                    }, 5000);
+                  }
                   return;
                 }
               }
 
-              // Log progress every 10 attempts
-              if (attempts % 10 === 0) {
+              // Log progress every 10 attempts (only in debug mode)
+              if (debugEnabled && attempts % 10 === 0) {
                 log('Attempt ' + attempts + '/' + maxAttempts + ' - field not found yet');
 
                 // Log all input fields found
@@ -172,7 +191,7 @@ const RavMesserForm = () => {
               if (attempts >= maxAttempts) {
                 clearInterval(timer);
                 log('✗ Failed to find ref field after ' + maxAttempts + ' attempts');
-                log('Please ensure you have a field named "ref" in your RavMesser form');
+                log('Please ensure you have a field named "ref" or "fields[ref]" in your RavMesser form');
               }
             }, 200);
           })();
@@ -186,7 +205,10 @@ const RavMesserForm = () => {
 
             // Watch for DOM changes
             var observer = new MutationObserver(function(mutations) {
-              var input = document.querySelector("input[name='ref']");
+              // Try RavMesser format first, then fallback
+              var input = document.querySelector("input[name='fields[ref]']") ||
+                         document.querySelector("input[name*='[ref]']") ||
+                         document.querySelector("input[name='ref']");
               if (input && !input.value) {
                 input.value = ref;
                 console.log('[RavMesser MutationObserver] Set ref field via mutation observer');
